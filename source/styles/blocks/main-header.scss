@@ -5,14 +5,11 @@
 
   @include tablet {
     display: flex;
+    align-items: center;
   }
 
   @include desktop {
-    padding: 24px 192px 22px 152px;
-
-    &--form {
-      padding: 23px 192px 16px 152px;
-    }
+    padding: 23px 192px 16px 152px;
   }
 }
 
@@ -21,7 +18,7 @@
   justify-content: space-between;
   padding: 5px 26px 5px 21px;
   position: relative;
-  height: 62px;
+  height: 68px;
 
   @include tablet {
     min-height: 104px;
@@ -103,6 +100,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: $green;
+  right: 30px;
 
   &:hover {
     background-color: $green-hover;
@@ -117,15 +115,17 @@
   display: block;
 }
 
-.no-js {
-  .main-header__nav {
-    display: block;
-    position: static;
-    z-index: 5555;
-    margin-top: 0;
-  }
+@media (max-width: 767px) {
+  .no-js {
+    .main-header__nav {
+      display: block;
+      position: static;
+      z-index: 5555;
+      margin-top: 0;
+    }
 
-  .main-header__button {
-    display: none;
+    .main-header__button {
+      display: none;
+    }
   }
 }

@@ -16,6 +16,10 @@
     padding-right: 26px;
   }
 
+  &--contacts {
+    padding-right: 38px;
+  }
+
   @include tablet {
     padding-left: 93px;
     padding-right: 93px;
@@ -42,7 +46,7 @@
 
 
     &--new {
-      padding-left: 165px;
+      padding-left: 167px;
       padding-right: 156px;
     }
 

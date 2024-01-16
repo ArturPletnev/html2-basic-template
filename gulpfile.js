@@ -141,7 +141,7 @@ export function startServer () {
     cors: true,
     notify: false,
     ui: false,
-    browser: "chrome"
+    browser: 'chrome'
   }, (err, bs) => {
     bs.addMiddleware('*', (req, res) => {
       res.write(readFileSync(`${PATH_TO_DIST}404.html`));

@@ -14,6 +14,10 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 21px;
     grid-template-rows: auto auto 1fr;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 158px;
   }
 }
 
@@ -23,20 +27,25 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 
   @include tablet {
-    padding-left: 216px;
+    padding-left: 102px;
     margin-bottom: 45px;
+    width: 540px;
   }
 
   @include desktop {
     margin: 0;
-    padding-left: 132px;
+    padding-left: 136px;
     justify-content: flex-start;
   }
 }
 
 .contacts__title {
+  width: 266px;
   padding-bottom: 70px;
   padding-right: 41px;
 
@@ -58,7 +67,7 @@
   @include desktop {
     width: 550px;
     margin: 0;
-    padding-bottom: 60px;
+    padding-bottom: 58px;
   }
 }
 
@@ -120,7 +129,7 @@
   @include desktop {
     padding-right: 0;
     margin: 0;
-    padding-left: 91px;
+    padding-left: 95px;
     width: 505px;
     padding-top: 13px;
     padding-bottom: 26px;
@@ -181,10 +190,11 @@
 }
 
 .contacts__map {
+  position: relative;
+
   @include desktop {
     grid-column: 1/2;
     grid-row: 1/4;
-    padding-left: 156px;
-    width: 710px;
+    width: 552px;
   }
 }

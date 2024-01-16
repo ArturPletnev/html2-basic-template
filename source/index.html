@@ -10,7 +10,6 @@
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <script src="scripts/index.js" defer></script>
   <link rel="preload" href="./fonts/Comfortaa/Comfortaa-400.woff2" as="font">
   <link rel="preload" href="./fonts/Raleway/Raleway-Regular.woff2" as="font">
   <link rel="preload" href="./fonts/Amatic/AmaticSC-Bold.woff2" as="font">
@@ -216,13 +215,14 @@
             свежие ягоды</h3>
           <p class="new__item-text new__item-text--description">Свежие ягоды урожая этого года со&nbsp;скидкой 15%.
             Клубнику,
-            малину, голубику, вишню доставим от&nbsp;200&nbsp;гр. </p>
+            малину, голубику, вишню доставим от&nbsp;200&nbsp;гр.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-15">15 июня 2022</time>
         </li>
         <li class="new__item new__item--mix">
           <h3 class="new__item-text new__item-text--title new__item-text--mix">Микс из ягод</h3>
           <p class="new__item-text new__item-text--description">Мы приготовим для вас смеси
-            из&nbsp;различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления
+            из&nbsp;различных замороженных ягод по&nbsp;вашему пожеланию. Ягодные смеси удобно использовать для
+            приготовления
             напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить
             их&nbsp;естественный вкус и&nbsp;аромат.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-02">02 июня 2022</time>
@@ -239,20 +239,20 @@
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
       </div>
       <div class="contacts__map">
-        <div id="map" class="contacts__ymap"></div>
+        <div class="contacts__ymap" id="map"></div>
         <noscript>
-        <picture class="contacts__map-wrapper">
-          <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
-            media="(min-width: 1440px)">
-          <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
-            media="(min-width: 768px)">
-          <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
-          <source srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" media="(min-width: 1440px)">
-          <source srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" media="(min-width: 768px)">
-          <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320" height="372"
-            alt="Карта">
-        </picture>
-      </noscript>
+          <picture class="contacts__map-wrapper">
+            <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
+              media="(min-width: 1440px)">
+            <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+              media="(min-width: 768px)">
+            <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
+            <source type="images/jpg" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" media="(min-width: 1440px)">
+            <source type="images/jpg" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" media="(min-width: 768px)">
+            <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320"
+              height="372" alt="Карта">
+          </picture>
+        </noscript>
       </div>
     </section>
   </main>
@@ -260,19 +260,20 @@
   <footer class="page__footer">
     <a class="page__footer-logo page__logo" href="#">
       <div class="page__footer-logo-main-wrapper page__logo-wrapper">
-        <svg width="36" height="44" viewBox="0 0 36 44" class="page__footer-logo-main page__logo-main">
+        <svg class="page__footer-logo-main page__logo-main" width="36" height="44" viewBox="0 0 36 44">
           <use href="images/icons/stack.svg#logo-main"></use>
         </svg>
       </div>
-      <svg width="70" height="40" viewBox="0 0 36 44" class="page__footer-logo-text page__logo-text">
+      <svg class="page__footer-logo-text page__logo-text" width="70" height="40" viewBox="0 0 36 44">
         <use href="images/icons/stack.svg#berry"></use>
       </svg>
+      <span class="visually-hidden">Логотип Ягода</span>
     </a>
     <ul class="page__footer-social social">
       <li class="social__item">
         <a class="social__link social__tg" href="#">
           <svg class="social__vk-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#telegram"></use>
+            <use href="./images/icons/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
@@ -280,7 +281,7 @@
       <li class="social__item">
         <a class="social__link social__vk" href="#">
           <svg class="social__yt-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#vkontakte"></use>
+            <use href="./images/icons/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
@@ -288,7 +289,7 @@
       <li class="social__item">
         <a class="social__link social__yt" href="#">
           <svg class="social__tg-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#youtube"></use>
+            <use href="./images/icons/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
@@ -296,11 +297,13 @@
     </ul>
     <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
       <svg class="page__footer-html-img" width="28" height="32">
-        <use xlink:href="./images/icons/stack.svg#htmlacademy"></use>
+        <use href="./images/icons/stack.svg#htmlacademy"></use>
       </svg>
       <span class="visually-hidden">Логотип html academy</span>
     </a>
   </footer>
+
+  <script src="scripts/index.js" defer></script>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU">
   </script>

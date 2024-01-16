@@ -10,7 +10,6 @@
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <script src="scripts/index.js" defer></script>
   <link rel="preload" href="./fonts/Comfortaa/Comfortaa-400.woff2" as="font">
   <link rel="preload" href="./fonts/Raleway/Raleway-Regular.woff2" as="font">
   <link rel="preload" href="./fonts/Amatic/AmaticSC-Bold.woff2" as="font">
@@ -62,8 +61,10 @@
           <source type="image/webp" srcset="images/hero-tablet@1x.webp 1x, images/hero-tablet@2x.webp 2x"
             media="(min-width: 768px)">
           <source type="image/webp" srcset="images/hero@1x.webp 1x, images/hero@2x.webp 2x">
-          <source srcset="images/hero-desktop@1x.jpg 1x, images/hero-desktop@2x.jpg 2x" media="(min-width: 1150px)">
-          <source srcset="images/hero-tablet@1x.jpg 1x, images/hero-tablet@2x.jpg 2x" media="(min-width: 768px)">
+          <source type="image/jpg" srcset="images/hero-desktop@1x.jpg 1x, images/hero-desktop@2x.jpg 2x"
+            media="(min-width: 1150px)">
+          <source type="image/jpg" srcset="images/hero-tablet@1x.jpg 1x, images/hero-tablet@2x.jpg 2x"
+            media="(min-width: 768px)">
           <img class="hero-inner__img" src="images/hero@1x.jpg" srcset="images/hero@2x.jpg 2x" width="344" height="180"
             alt="Замороженная брусника">
         </picture>
@@ -80,8 +81,8 @@
 
         <!-- Выбор ягод чекбокс -->
         <fieldset class="form__fieldset form__fieldset--checkbox">
+          <legend class="form__title form__title--checkbox container container--form">Выберите ягоды</legend>
           <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
-            <h2 class="form__title form__title--checkbox">Выберите ягоды</h2>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--br form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
@@ -159,8 +160,8 @@
 
         <!-- Выбор вида хранения чекбокс -->
         <fieldset class="form__fieldset form__fieldset--freeze">
+          <legend class="form__title form__title--freeze container container--form">Вид хранения</legend>
           <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
-            <h2 class="form__title form__title--freeze">Вид хранения</h2>
             <ul class="form__list form__list--freeze">
               <li class="form__item form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
@@ -189,10 +190,10 @@
 
         <!-- Радиокнопки выбора -->
         <fieldset class="form__fieldset form__fieldset--radio">
+          <legend class="form__title form__title--radio container container--form">Способ доставки</legend>
           <div class="form__fieldset-wrapper container container--form">
-            <h2 class="form__title form__title--radio">Способ доставки</h2>
             <ul class="form__list form__list--radio">
-              <li class="form__item form__item-control form__item-control--radio">
+              <li class="form__item form__item-control form__item-control--radio form__item-control--delivery">
                 <label class="form__control form__control--delivery">
                   <input class="form__control-input visually-hidden" type="radio" name="programs-group"
                     value="delivery">
@@ -214,8 +215,10 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="form__title form__title--name container container--form container--contacts">Ваши контакты</legend>
           <div class="form__fieldset-wrapper container container--form container--contacts">
-            <h2 class="form__title form__title--name">Ваши контакты</h2>
+
+            <!-- Чтобы увидеть ошибку error необходимо поставить модификатор -->
             <ul class="form__list form__list--contacts">
 
               <li class="form__item form__item--name">
@@ -242,21 +245,18 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--address">
-          <div
-            class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
-            <h2 class="form__title form__title--add">Адрес<span class="form__item-star">*</span></h2>
+          <legend class="form__title form__title--add container container--form container--contacts">Адрес<span class="form__item-star">*</span></legend>
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
             <div class="form__wrapper-input">
-              <textarea class="form__input-all form__input-all--address" id="fild-about-address" name="fild-about-comment"
-                placeholder="Адрес в Санкт-Петербурге" required></textarea>
+              <textarea class="form__input-all form__input-all--address" id="fild-about-address"
+                name="fild-about-comment" placeholder="Адрес в Санкт-Петербурге" required></textarea>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--add">
-          <div
-            class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
-            <h2 class="form__title form__title--add form__title--addorder">Пожелания к заказу<span
-                class="form__item-star">*</span></h2>
+          <legend class="form__title form__title--add form__title--addorder container container--form container--contacts">Пожелания к заказу<span class="form__item-star">*</span></legend>
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
             <div class="form__wrapper-input">
               <textarea class="form__input-all form__input-all--order" id="fild-about-comment" name="fild-about-comment"
                 placeholder="Чем мы можем вам помочь?" required></textarea>
@@ -276,20 +276,22 @@
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
       </div>
       <div class="contacts__map">
-        <div id="map" class="contacts__ymap"></div>
+        <div class="contacts__ymap" id="map"></div>
         <noscript>
-        <picture class="contacts__map-wrapper">
-          <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
-            media="(min-width: 1440px)">
-          <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
-            media="(min-width: 768px)">
-          <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
-          <source srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" media="(min-width: 1440px)">
-          <source srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" media="(min-width: 768px)">
-          <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320" height="372"
-            alt="Карта">
-        </picture>
-      </noscript>
+          <picture class="contacts__map-wrapper">
+            <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
+              media="(min-width: 1440px)">
+            <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+              media="(min-width: 768px)">
+            <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
+            <source type="images/jpeg" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
+              media="(min-width: 1440px)">
+            <source type="images/jpeg" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x"
+              media="(min-width: 768px)">
+            <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320"
+              height="372" alt="Карта">
+          </picture>
+        </noscript>
       </div>
     </section>
   </main>
@@ -297,19 +299,20 @@
   <footer class="page__footer">
     <a class="page__footer-logo page__logo" href="#">
       <div class="page__footer-logo-main-wrapper page__logo-wrapper">
-        <svg width="36" height="44" viewBox="0 0 36 44" class="page__footer-logo-main page__logo-main">
+        <svg class="page__footer-logo-main page__logo-main" width="36" height="44" viewBox="0 0 36 44">
           <use href="images/icons/stack.svg#logo-main"></use>
         </svg>
       </div>
-      <svg width="70" height="40" viewBox="0 0 36 44" class="page__footer-logo-text page__logo-text">
+      <svg class="page__footer-logo-text page__logo-text" width="70" height="40" viewBox="0 0 36 44">
         <use href="images/icons/stack.svg#berry"></use>
       </svg>
+      <span class="visually-hidden">Логотип ягода</span>
     </a>
     <ul class="page__footer-social social">
       <li class="social__item">
         <a class="social__link social__tg" href="#">
           <svg class="social__vk-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#telegram"></use>
+            <use href="./images/icons/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
@@ -317,7 +320,7 @@
       <li class="social__item">
         <a class="social__link social__vk" href="#">
           <svg class="social__yt-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#vkontakte"></use>
+            <use href="./images/icons/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
@@ -325,7 +328,7 @@
       <li class="social__item">
         <a class="social__link social__yt" href="#">
           <svg class="social__tg-img" width="32" height="32">
-            <use xlink:href="./images/icons/stack.svg#youtube"></use>
+            <use href="./images/icons/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
@@ -333,14 +336,15 @@
     </ul>
     <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
       <svg class="page__footer-html-img" width="28" height="32">
-        <use xlink:href="./images/icons/stack.svg#htmlacademy"></use>
+        <use href="./images/icons/stack.svg#htmlacademy"></use>
       </svg>
       <span class="visually-hidden">Логотип html academy</span>
     </a>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU">
-  </script>
+  <script src="scripts/index.js" defer></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU"></script>
 
 </body>
 

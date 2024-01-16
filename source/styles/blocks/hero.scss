@@ -1,10 +1,11 @@
 .hero {
-  padding: 62px 30px 150px 30px;
+  padding: 61px 30px 150px 30px;
   background-image: url("../../images/hero-back@1x.jpg");
   width: 100%;
   min-height: 640px;
-  background-position: center top;
+  background-position: x;
   background-repeat: no-repeat;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   background-color: $hero-background;
@@ -20,7 +21,7 @@
     background-image: url("../../images/hero-back-desktop@1x.jpg");
     min-height: 797px;
     padding: 173px 349px 150px 535px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 
@@ -68,6 +69,7 @@
   font-weight: 400;
   line-height: normal;
   width: 164px;
+  letter-spacing: 0.1px;
 
   &::before {
     position: absolute;
@@ -133,4 +135,3 @@
     padding: 19px 109px;
   }
 }
-

@@ -108,7 +108,7 @@
     &--radio {
       flex-direction: row;
       padding-left: 2px;
-      column-gap: 23px;
+      column-gap: 26px;
     }
 
     &--contacts {
@@ -306,7 +306,8 @@
     font-weight: 400;
     line-height: normal;
     display: block;
-    padding: 0 0 5px 13px;
+    padding-bottom: 5px;
+    margin-left: 13px;
   }
 
   &--addorder {
@@ -488,6 +489,7 @@
   line-height: 20px;
   letter-spacing: 0.2px;
   min-width: 269px;
+  width: 100%;
 
   &--address {
     min-height: 88px;
@@ -501,7 +503,7 @@
     min-width: 300px;
 
     &--address {
-      padding: 16px 12px 15px 12px;
+      padding: 16px 12px 13px 12px;
       min-width: 624px;
       height: 52px;
       min-height: 52px;
@@ -530,8 +532,12 @@
     opacity: 1;
   }
 
-  &:invalid:not(:placeholder-shown) {
+  &--invalid {
     border-color: $error;
+  }
+
+  @include desktop {
+    width: auto;
   }
 }
 
@@ -574,4 +580,18 @@
 
 .form__control-input:disabled + .form__control-mark {
   border: 1px solid $leaf-grey;
+}
+
+.form__item-control {
+  @include tablet {
+    &--delivery {
+      width: 42%;
+    }
+  }
+
+  @include desktop {
+    &--delivery {
+      width: auto;
+    }
+  }
 }

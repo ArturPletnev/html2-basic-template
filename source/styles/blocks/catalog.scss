@@ -8,7 +8,7 @@
   }
 
   @include desktop {
-    padding-bottom: 241px;
+    padding-bottom: 240px;
   }
 
   &::after {
@@ -72,6 +72,8 @@
   border-radius: 40px;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.15);
   padding-bottom: 53px;
+  max-width: 264px;
+  margin: 0 auto;
 }
 
 .catalog__item-picture {
